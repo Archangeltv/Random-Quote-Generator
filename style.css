@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;800&display=swap");
+
+:root {
+  --LightCyan: hsl(193, 38%, 86%);
+  --NeonGreen: hsl(150, 100%, 66%);
+  --GrayishBlue: hsl(217, 19%, 38%);
+  --DarkGrayishBlue: hsl(217, 19%, 24%);
+  --DarkBlue: hsl(218, 23%, 16%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: var(--DarkBlue);
+  font-family: "Manrope", sans-serif;
+  font-size: 20px;
+  padding: 30px;
+}
+
+.container {
+  max-width: 500px;
+  background-color: var(--DarkGrayishBlue);
+  padding: 50px;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+div > p.quote {
+  margin-bottom: 2rem;
+  color: var(--LightCyan);
+}
+
+div p.author {
+  margin-bottom: 2rem;
+  color: var(--LightCyan);
+}
+
+.container > p {
+  margin-bottom: 2rem;
+  text-align: center;
+  color: var(--NeonGreen);
+}
+
+.container > img {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.img {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: -2rem;
+  height: 70px;
+  width: 70px;
+  padding: 15px;
+  margin: 0;
+  border-radius: 100%;
+  cursor: pointer;
+  background-color: var(--LightCyan);
+  background-color: var(--NeonGreen);
+  box-shadow: -2px -1px 80px 4px var(--NeonGreen);
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.img > img {
+  width: 100%;
+  animation: rotate 3s infinite linear;
+}
+
+.img > img.slow {
+  width: 100%;
+  animation: rotate 3s infinite linear;
+}
+
+.img:hover > img {
+  animation: rotate 0.5s infinite linear;
+}
