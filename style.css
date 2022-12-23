@@ -97,3 +97,9 @@ div p.author {
 .img:hover > img {
   animation: rotate 0.5s infinite linear;
 }
+
+@media (max-width: 900px) {
+  .img:hover > img {
+    animation: rotate 3s infinite linear;
+  }
+}
